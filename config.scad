@@ -1,0 +1,17 @@
+include <s-hydro/hydroponics.scad>
+
+// wall thickness
+w=3;
+
+// inner diameter
+di=15;
+// funnel outer diameter
+fdo=40;
+// heigt (water level)
+h=250;
+// cover inner diameter
+cdi=fdo+di*2;
+// cover edge radius
+cr=di/4;
+// nozzle outer diameter
+ndo=8;

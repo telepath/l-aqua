@@ -7,3 +7,6 @@
 [submodule "s-hydro"]
 	path = s-hydro
 	url = ../s-hydro.git
+[submodule "v-hydro"]
+	path = v-hydro
+	url = ../v-hydro.git
