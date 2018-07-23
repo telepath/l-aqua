@@ -1,0 +1,9 @@
+[submodule "b-hydro"]
+	path = b-hydro
+	url = ../b-hydro.git
+[submodule "threaded-library"]
+	path = threaded-library
+	url = ../threaded-library.git
+[submodule "s-hydro"]
+	path = s-hydro
+	url = ../s-hydro.git
