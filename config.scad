@@ -1,7 +1,7 @@
 include <s-hydro/hydroponics.scad>
 
 // wall thickness
-w=3;
+w=2;
 
 // inner diameter
 di=15;
@@ -15,3 +15,8 @@ cdi=fdo+di*2;
 cr=di/4;
 // nozzle outer diameter
 ndo=8;
+
+//large thread diameter
+lto=45;
+//large thread length
+ltl=20;
