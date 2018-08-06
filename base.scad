@@ -27,10 +27,15 @@ rotate([180, 0, 0]) {
 } */
 
 module assembly(d,w) {
-  base_plate(
-    d=d,
-    w=w
-  );
+  %seal(d=lto*1.5,w=w);
+
+  difference() {
+    base_plate(
+      d=d,
+      w=w
+    );
+    seal(d=lto*1.5,w=w);
+  }
   large_thread(
     l=ltl,
     d=lto,
@@ -41,6 +46,13 @@ module assembly(d,w) {
     d=ThreadOuterDiameter,
     w=w
   );
+}
+
+module seal(d,w) {
+  difference() {
+    cylinder(d=d, h=w, center=true);
+    cylinder(d=d-w*2, h=w*2, center=true);
+  }
 }
 
 module base_plate(d,w) {
