@@ -1,5 +1,5 @@
 use <b-hydro/boxInset_large.scad>
-include <config.scad>
+include <conf/config.scad>
 
 mesh_divider(height=100);
 

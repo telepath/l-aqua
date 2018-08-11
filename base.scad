@@ -1,4 +1,4 @@
-include <config.scad>
+include <conf/config.scad>
 
 /* #large_thread(l=ltl,d=lto,w=w*2); */
 

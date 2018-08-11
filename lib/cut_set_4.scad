@@ -1,4 +1,4 @@
-include <config.scad>
+include <../conf/config.scad>
 include <cutitup.scad>
 
 h=150;

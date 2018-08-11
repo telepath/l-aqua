@@ -1,6 +1,6 @@
 include <b-hydro/siphon2.scad>
-include <config.scad>
-include <cut_set_4.scad>
+include <conf/config.scad>
+include <lib/cut_set_4.scad>
 
 d=cdi;
 

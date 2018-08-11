@@ -1,4 +1,4 @@
-include <config.scad>
+include <conf/config.scad>
 
 knob_thread(
   l=ltl/2,

@@ -1,4 +1,4 @@
-include <config.scad>
+include <conf/config.scad>
 use <base.scad>
 
 seal(d=lto*1.5,w=w*2);

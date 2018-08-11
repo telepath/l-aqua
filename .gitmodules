@@ -10,3 +10,9 @@
 [submodule "v-hydro"]
 	path = v-hydro
 	url = ../v-hydro.git
+[submodule "MCAD"]
+	path = MCAD
+	url = https://github.com/SolidCode/MCAD.git
+[submodule "lib/Write.scad"]
+	path = lib/Write.scad
+	url = git@github.com:telepath/Write.scad.git
