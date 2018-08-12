@@ -1,6 +1,6 @@
 include <b-hydro/siphon2.scad>
 include <conf/config.scad>
 
-rotate([180, 0, 0]) {
+rotate([0, 180, 0]) {
   cover_snorkel(cdi=cdi,di=di/2,cr=cr,w=w,h=h,h0=0);
 }
