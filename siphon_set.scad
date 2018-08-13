@@ -1,4 +1,4 @@
-include <b-hydro/siphon2.scad>
+include <lib/b-hydro/siphon2.scad>
 include <lib/cut_set_4.scad>
 
 d=di+w*2;

@@ -1,4 +1,4 @@
-include <s-hydro/hydroponics.scad>
+include <lib/s-hydro/hydroponics.scad>
 
 // wall thickness
 w=2;
@@ -8,7 +8,7 @@ di=15;
 // funnel outer diameter
 fdo=40;
 // heigt (water level)
-h=250;
+h=200;
 // cover inner diameter
 cdi=fdo+di*2;
 // barrier diameter
