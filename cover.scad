@@ -1,4 +1,4 @@
-include <lib/b-hydro/siphon2.scad>
+include <lib/b-hydro/lib/siphon2.scad>
 include <conf/config.scad>
 
 rotate([0, 180, 0]) {
