@@ -1,4 +1,5 @@
 include <conf/config.scad>
+include <lib/HT40.scad>
 
 /* #large_thread(l=ltl,d=lto,w=w*2); */
 
@@ -46,6 +47,9 @@ module assembly(d,w) {
     d=ThreadOuterDiameter,
     w=w
   );
+  rotate([180, 0, 0]) {
+    HT40_pipeend(h=ltl*2);
+  }
 }
 
 module seal(d,w) {

@@ -19,7 +19,7 @@ cr=di/4;
 ndo=8;
 
 //large thread diameter
-lto=45;
+lto=43;
 //large thread length
 ltl=20;
 
