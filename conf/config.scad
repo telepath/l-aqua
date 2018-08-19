@@ -1,4 +1,5 @@
 include <lib/s-hydro/lib/hydroponics.scad>
+include <lib/text.scad>
 
 // wall thickness
 w=2;
@@ -24,3 +25,6 @@ lto=43;
 ltl=20;
 
 MAT="MAT";
+SRC="l-aqua";
+VER="";
+FILE="";

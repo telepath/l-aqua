@@ -36,6 +36,9 @@ module assembly(d,w) {
       w=w
     );
     seal(d=lto*1.5,w=w);
+    translate([-d/3, 0, w])
+      rotate(90)
+        label(t=1,text1=str(d,"/",ltl,"/",ThreadOuterDiameter,"/",MAT),text2=str(SRC," ",FILE," ",VER));
   }
   large_thread(
     l=ltl,
