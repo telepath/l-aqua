@@ -1,8 +1,8 @@
 include <lib/b-hydro/lib/siphon2.scad>
 include <conf/config.scad>
 
-di=7.5;
-fdo=25;
+di=10;
+fdo=30;
 
 rotate([0, 180, 0]) {
   screw_siphon();
