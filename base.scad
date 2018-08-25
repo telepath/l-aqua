@@ -51,7 +51,7 @@ module assembly(d,w) {
     w=w
   );
   rotate([180, 0, 0]) {
-    HT40_pipeend(h=ltl*2);
+    HT40_pipeend(h=ltl+30);
   }
 }
 
