@@ -2,7 +2,7 @@ include <lib/s-hydro/lib/hydroponics.scad>
 include <lib/text.scad>
 
 // wall thickness
-w=2;
+w=1.5;
 
 // inner diameter
 di=15;
