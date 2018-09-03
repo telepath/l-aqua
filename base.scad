@@ -6,7 +6,7 @@ include <lib/HT40.scad>
 rotate([180, 0, 0]) {
     assembly(
     d=bdm,
-    w=w*2
+    w=w*3
   );
 }
 /* projection(cut=true)
@@ -29,11 +29,14 @@ rotate([180, 0, 0]) {
 
 module assembly(d,w) {
   %seal(d=lto*1.5,w=w);
+  C=3.14*d;
+  n=floor(C/(w*3));
 
   difference() {
     base_plate(
       d=d,
-      w=w
+      w=w,
+      $fn=n
     );
     seal(d=lto*1.5,w=w);
     translate([-d/3, 0, w])
@@ -52,6 +55,24 @@ module assembly(d,w) {
   );
   rotate([180, 0, 0]) {
     HT40_pipeend(h=ltl+30);
+  }
+  intersection() {
+    for (i=[0:n]) {
+      rotate(360/n*(i+0.5)) {
+        clip(d=d,w=w);
+      }
+    }
+    translate([0, 0, w/2]) {
+      cylinder(d=d+w*2, h=w/2);
+    }
+  }
+}
+/* !clip(); */
+module clip(d,w=w) {
+  translate([(d-w)/2, 0, w*0.75]) {
+    rotate([0, -20, 0]) {
+      cube(size=[w, w, w], center=true);
+    }
   }
 }
 

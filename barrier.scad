@@ -1,7 +1,7 @@
 use <lib/b-hydro/boxInset_large.scad>
 include <conf/config.scad>
 
-mesh_divider(height=100);
+mesh_divider(height=120);
 
 module slanted_ring(
   d1,
@@ -40,6 +40,7 @@ module mesh(
 ) {
   C=3.14*d;
   n=floor(C/(wl*3));
+  echo(str("n=",n));
   /* n=1; */
 
   for (i=[0:n]) {
