@@ -71,7 +71,9 @@ module assembly(d,w) {
 module clip(d,w=w) {
   translate([(d-w)/2, 0, w*0.75]) {
     rotate([0, -20, 0]) {
-      cube(size=[w, w, w], center=true);
+      rotate([45, 0, 0]) {
+        cube(size=[w, w, w], center=true);
+      }
     }
   }
 }
