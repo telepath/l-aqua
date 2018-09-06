@@ -9,3 +9,11 @@ translate([-bdm, 0, w*3]) {
     );
   }
 }
+
+/* include <conf/config.scad>
+render()
+import("stl/nut.stl");
+translate([-bdm, 0, w*3]) {
+  render()
+  import("stl/base.stl");
+} */
