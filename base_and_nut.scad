@@ -1,5 +1,5 @@
 include <nut.scad>
-use <base.scad>
+use <lib/base.scad>
 
 translate([-bdm, 0, w*3]) {
   rotate([180, 0, 0]) {

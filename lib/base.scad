@@ -29,6 +29,7 @@ rotate([180, 0, 0]) {
 
 module assembly(d,w) {
   %seal(d=lto*1.5,w=w);
+  /* %seal(d=lto*1.5,w=w*1.5); */
   C=3.14*d;
   n=floor(C/(w*3));
 
@@ -39,6 +40,7 @@ module assembly(d,w) {
       $fn=n
     );
     seal(d=lto*1.5,w=w);
+    /* seal(d=lto*1.5,w=w*1.5); */
     translate([-d/3, 0, w])
       rotate(90)
         label(t=1,text1=str(d,"/",ltl,"/",ThreadOuterDiameter,"/",MAT),text2=str(SRC," ",FILE," ",VER));
@@ -78,10 +80,25 @@ module clip(d,w=w) {
   }
 }
 
-module seal(d,w) {
+module seal(d,w,h,ff=0.9) {
   difference() {
-    cylinder(d=d, h=w, center=true);
-    cylinder(d=d-w*2, h=w*2, center=true);
+    n=floor(w/2/ff)*2;
+    echo(str("n=",n));
+    dd=w/(n+1);
+    echo(str("dd=",dd));
+    ring(d,w,h);
+    for (i=[0:n/2]) {
+      translate([0, 0, h/2]) {
+        ring(d-dd*2-dd*4*i,dd,h);
+      }
+    }
+  }
+}
+
+module ring(d,w,h) {
+  difference() {
+    cylinder(d=d, h=h, center=true);
+    cylinder(d=d-w*2, h=h+w, center=true);
   }
 }
 
