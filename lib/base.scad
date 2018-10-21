@@ -1,14 +1,16 @@
 include <conf/config.scad>
 include <lib/HT40.scad>
 
+ff=0.87;
+
 /* #large_thread(l=ltl,d=lto,w=w*2); */
 
-rotate([180, 0, 0]) {
+/* rotate([180, 0, 0]) {
     assembly(
     d=bdm,
     w=w*3
   );
-}
+} */
 /* projection(cut=true)
 {
   translate([0,0,w+1]) {
@@ -28,7 +30,10 @@ rotate([180, 0, 0]) {
 } */
 
 module assembly(d,w) {
-  %seal(d=lto*1.5,w=w);
+  rotate([180, 0, 0]) {
+    %seal();
+    /* %seal(d=lto*1.5,w=w); */
+  }
   /* %seal(d=lto*1.5,w=w*1.5); */
   C=3.14*d;
   n=floor(C/(w*3));
@@ -39,7 +44,9 @@ module assembly(d,w) {
       w=w,
       $fn=n
     );
-    seal(d=lto*1.5,w=w);
+    rotate([180, 0, 0]) {
+      seal(ff=w);
+    }
     /* seal(d=lto*1.5,w=w*1.5); */
     translate([-d/3, 0, w])
       rotate(90)
@@ -80,7 +87,8 @@ module clip(d,w=w) {
   }
 }
 
-module seal(d,w,h,ff=0.9) {
+/* module seal(d,w,h,ff=0.9) { */
+module seal(d=lto*1.5,w=w*2,h=w*2,ff=ff) {
   difference() {
     n=floor(w/2/ff)*2;
     echo(str("n=",n));
