@@ -1,1 +1,2 @@
-lib/openscad-slicer-makefile/submodules.sh
+# git submodule sync
+git submodule update --checkout --init --recursive $@
