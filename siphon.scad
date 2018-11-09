@@ -6,8 +6,8 @@ difference() {
     rotate([0, 180, 0]) {
       screw_siphon();
     }
-    /* translate([fdo*2, 0, -LidHeight+cr+w]) */
-    translate([0, 0, -LidHeight*2.3])
+    translate([fdo*2, 0, -LidHeight+cr+w])
+    /* translate([0, 0, -LidHeight*2.3]) */
     {
       rotate([0, 180, 0]) {
         cover_snorkel(cdi=cdi,di=di/2,cr=cr,w=w,h=h+fdo/2-LidHeight*2,fdo=fdo,h0=0);
