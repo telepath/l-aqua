@@ -9,7 +9,7 @@ di=15;
 // funnel outer diameter
 fdo=40;
 // heigt (water level)
-h=200;
+h=100;
 // cover inner diameter
 cdi=fdo+di*2;
 // barrier diameter
