@@ -29,9 +29,11 @@ ff=0.87;
   }
 } */
 
-module assembly(d,w) {
-  rotate([180, 0, 0]) {
-    %seal();
+module assembly(d,w,seal=true) {
+  if (seal) {
+    rotate([180, 0, 0]) {
+      %seal();
+    }
     /* %seal(d=lto*1.5,w=w); */
   }
   /* %seal(d=lto*1.5,w=w*1.5); */
@@ -44,8 +46,10 @@ module assembly(d,w) {
       w=w,
       $fn=n
     );
-    rotate([180, 0, 0]) {
-      seal(ff=w);
+    if (seal) {
+      rotate([180, 0, 0]) {
+        seal(ff=w);
+      }
     }
     /* seal(d=lto*1.5,w=w*1.5); */
     translate([-d/3, 0, w])
